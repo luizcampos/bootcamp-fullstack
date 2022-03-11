@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 activities</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Currying
+    function soma(a){
+        return function(b){
+            console.log(a+b);
+        }
+    }
+
+    const soma2 = soma(2);
+
+    soma2(3);
+
+    //Hoisting
+    (function fn(){
+        console.log(text);
+
+        var text = "Oi!"
+        console.log(text);
+    })();
+
+    //Variavéis
+    var nameVar = "Luiz";
+    let nameLet = "Luiz";
+    const nameConst = "Luiz";
+
+    (() => {
+        let test = "valor 1";
+        console.log("Valor dentro da função: " + test);
+
+        if(true){
+            let test = "valor dentro do if"
+            console.log("Valor dentro da função: " + test);
+        }
+
+        console.log("Valor após a execução do if " + test);
+    })();
+</script>
+</html>
